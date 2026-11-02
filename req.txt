@@ -1,0 +1,6 @@
+# Optional dependencies (e.g. for testing and optional API extension)
+pytest>=7.0.0
+
+# Optional: if you plan to build an API/Web interface later
+# fastapi>=0.100.0
+# uvicorn>=0.23.0

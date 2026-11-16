@@ -40,21 +40,26 @@ class TimeSlot:
     # TODO: Add method or property to calculate slot duration.
 
 
+
 @dataclass
 class Member:
-    """Represents a person participating in group meetings.
+    """Represents a person participating in group meetings."""
 
-    HINT:
-    - `busy_slots` or `available_slots`: Decide whether you want to track
-      when this member is BUSY or when they are FREE.
-      Standard calendars usually track busy slots and infer free windows.
-    - The dictionary keys can be day names: 'Monday', 'Tuesday', ..., 'Sunday'.
-    """
     name: str
     schedule: Dict[str, List[TimeSlot]] = field(default_factory=dict)
 
-    # TODO: Add method to register a time slot for a given day (e.g., add_slot(day, slot)).
-    # TODO: Add method to retrieve sorted slots for a specific day.
+    def add_slot(self, day: str, slot: TimeSlot) -> None:
+        """Add a time slot to a specific day."""
+        if day not in self.schedule:
+            self.schedule[day] = []
 
+        self.schedule[day].append(slot)
+
+    def get_sorted_slots(self, day: str) -> List[TimeSlot]:
+        """Return time slots for a day, sorted by start time."""
+        return sorted(
+            self.schedule.get(day, []),
+            key=lambda slot: slot.start
+        )
 
 # Test for commit (TW)

@@ -5,6 +5,7 @@ A Python application designed to find optimal meeting times for a group of parti
 ---
 Hi guys its sienna
 
+
 ## 🎯 Project Overview & Goals
 
 When coordinating a meeting among multiple people (e.g., student project groups, club committees, study groups), finding a free slot that works for everyone can be challenging.

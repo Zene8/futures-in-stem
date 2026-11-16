@@ -23,16 +23,15 @@ class TimeSlot:
       * overlaps(other): returns True if this slot overlaps another slot.
     """
     
-    Timeslot()
     
-    def __init__(start : time, end:time):
+    def __init__(self,start : time, end:time):
       self.start = start
       self.end = end
       self.durations_minutes = end - start
       pass
 
-    def overlaps():
-      pass
+    def overlaps(self, otherTimeslot: Timeslot):
+      return (self.end < otherTimeslot.start and self.start < otherTimeslot.end)
     # TODO: Add validation ensuring start < end.
     # TODO: Add method or property to calculate slot duration.
 

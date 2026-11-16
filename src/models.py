@@ -25,6 +25,13 @@ class TimeSlot:
     start: time
     end: time
 
+    durations_minutes = end - start
+
+    def __init__():
+      pass
+
+    def overlaps():
+      pass
     # TODO: Add validation ensuring start < end.
     # TODO: Add method or property to calculate slot duration.
 

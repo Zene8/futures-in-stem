@@ -51,3 +51,6 @@ class Member:
 
     # TODO: Add method to register a time slot for a given day (e.g., add_slot(day, slot)).
     # TODO: Add method to retrieve sorted slots for a specific day.
+
+
+# Test for commit (TW)

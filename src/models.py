@@ -22,12 +22,13 @@ class TimeSlot:
       * duration_minutes: returns end - start in minutes.
       * overlaps(other): returns True if this slot overlaps another slot.
     """
-    start: time
-    end: time
-
-    durations_minutes = end - start
-
-    def __init__():
+    
+    Timeslot()
+    
+    def __init__(start : time, end:time):
+      self.start = start
+      self.end = end
+      self.durations_minutes = end - start
       pass
 
     def overlaps():

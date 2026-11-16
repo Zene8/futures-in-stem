@@ -21,13 +21,14 @@ def parse_time_str(time_str: str) -> time:
 
 def time_to_minutes(t: time) -> int:
     """Convert a datetime.time object to the number of minutes from midnight (0..1439).
-
+    
     HINT:
     - Formula: t.hour * 60 + t.minute.
     - Converting to minutes makes interval arithmetic (sorting, finding overlaps, differences)
       very straightforward.
     """
-    pass
+
+    return t.hour*60 + t.minute    
 
 
 def minutes_to_time(minutes: int) -> time:

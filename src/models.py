@@ -32,6 +32,10 @@ class TimeSlot:
 
     def overlaps(self, otherTimeslot: Timeslot):
       return (self.end < otherTimeslot.start and self.start < otherTimeslot.end)
+
+
+      def duration(self, otherTimeslot: TimeSlot):
+        return (self.end - self.start)
     # TODO: Add validation ensuring start < end.
     # TODO: Add method or property to calculate slot duration.
 
